@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+
+  /* MAIN GRADIENT */
+  background: linear-gradient(135deg, #365a76, #40748a, #336c5a, #2c5364);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+}
+
+/* ===== BACKGROUND PATTERN + GLOW ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+      45deg,
+      rgba(57, 79, 124, 0.637),
+      rgba(96, 77, 204, 0.46) 1px,
+      transparent 1px,
+      transparent 30px
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(255, 204, 51, 0.18),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(183, 195, 255, 0.22),
+      transparent 45%
+    );
+  z-index: -1;
+}
+
+/* gradient animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  height: 10vh;
+}
+
+.nav-container {
+  height: 100%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #ffcc33;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+.links a.active {
+  color: #ffcc33;
+  font-weight: 600;
+}
+
+.links a.active::after {
+  width: 100%;
+  background: #ffcc33;
+}
+
+/* ================= PAGE HEADER ================= */
+header {
+  padding: 40px 8% 30px;
+  margin: 30px 8%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  backdrop-filter: blur(14px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.9;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ================= SECTION ================= */
+section {
+  margin: 60px 8%;
+  padding: 45px 6%;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 26px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  animation: fadeUp 1.3s ease forwards;
+}
+
+/* glow top line */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc33, #b7c3ff, #ffcc33);
+}
+
+/* ================= SECTION HEADINGS ================= */
+section header h2 {
+  font-size: 2rem;
+  color: #ffcc33;
+}
+
+section header h3 {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  color: #cfd8ff;
+}
+
+/* ================= CONTENT MULTI ================= */
+.content-multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 35px 0;
+}
+
+/* ================= IMAGE STYLE ================= */
+figure {
+  margin: 0;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+figure:hover {
+  transform: translateY(-10px);
+}
+
+figure img {
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* hover glow */
+figure img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 55px rgba(111, 202, 248, 0.55);
+}
+
+figcaption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* ================= CONTENT GRID ================= */
+.content-multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.content-multi img,
+.content img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.content-multi img:hover,
+.content img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ARTICLE ================= */
+article {
+  margin-top: 25px;
+}
+
+article p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  opacity: 0.92;
+  animation: fadeText 1.4s ease forwards;
+}
+
+article p:first-child {
+  font-weight: 500;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  section {
+    padding: 35px 5%;
+  }
+
+  section header h2 {
+    font-size: 1.7rem;
+  }
+
+  figure img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ================= IMAGE LIGHTBOX ================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 18px;
+  box-shadow: 0 25px 80px rgba(66, 103, 158, 0.6);
+  animation: zoomIn 0.4s ease;
+}
+
+/* close button */
+.lightbox span {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2.8rem;
+  color: #347cb7;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* zoom animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* cursor hint */
+figure img,
+.content-multi img,
+.content img {
+  cursor: zoom-in;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  font-size: 0.9rem;
+  color: #ccc;
+}

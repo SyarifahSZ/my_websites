@@ -1,0 +1,312 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+
+  background: radial-gradient(circle at top left, #1e3c72, transparent 50%),
+    radial-gradient(circle at bottom right, #2a5298, transparent 55%),
+    linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* ================= SOFT MOVING BACKGROUND ================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+
+  opacity: 0.6;
+  z-index: -3;
+  animation: bgDrift 30s linear infinite;
+}
+
+@keyframes bgDrift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 300px 300px;
+  }
+}
+
+/* ================= FLOATING GLOW ================= */
+.glow-bg {
+  position: fixed;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.35), transparent 65%);
+  filter: blur(160px);
+  top: -120px;
+  left: -140px;
+  animation: glowFloat 24s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+.glow-bg.second {
+  background: radial-gradient(
+    circle,
+    rgba(100, 160, 255, 0.35),
+    transparent 65%
+  );
+  width: 480px;
+  height: 480px;
+  bottom: -140px;
+  right: -120px;
+  top: auto;
+  left: auto;
+  animation-duration: 32s;
+}
+
+@keyframes glowFloat {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(40px, 30px);
+  }
+}
+
+/* ================= PAGE LOAD ANIMATION ================= */
+header,
+main,
+footer {
+  opacity: 0;
+  animation: pageEnter 0.9s ease forwards;
+}
+
+main {
+  animation-delay: 0.2s;
+}
+
+footer {
+  animation-delay: 0.4s;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADER ================= */
+header {
+  padding: 40px 8% 30px;
+  margin: 30px 8%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.3rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+header p {
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  height: 10vh;
+}
+
+.nav-container {
+  height: 100%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #b7c3ff;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+.links a.active {
+  color: orange;
+  font-weight: 600;
+}
+
+.links a.active::after {
+  width: 100%;
+  background: orange;
+}
+
+/* ================= MAIN ================= */
+main {
+  padding: 20px 8% 60px;
+}
+
+/* ================= SECTION ================= */
+main section {
+  margin-top: 50px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= CONTENT GRID ================= */
+.content-multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.content-multi img,
+.content img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.content-multi img:hover,
+.content img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= TEXT ================= */
+main section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  animation: zoomIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  header {
+    margin: 20px;
+    padding: 30px 20px;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  main section {
+    padding: 20px;
+  }
+
+  .content-multi img,
+  .content img {
+    height: 160px;
+  }
+}
+
+/* ================= CURSOR ================= */
+figure img,
+.content-multi img,
+.content img {
+  cursor: zoom-in;
+}

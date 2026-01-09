@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <span class="background-shape"></span>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <span>IFAH</span>
+        </div>
+
+        <div class="links">
+          <a href="index.html" class="active">Home</a>
+          <a href="aboutme.html">About Me</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="educationhistory.html">Education History</a>
+          <a href="mydream.html">My Dream</a>
+          <a href="workexperience.html">Work Experience</a>
+          <a href="personalgoals.html">Personal Goals</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section>
+      <div class="main-container">
+        <div class="image">
+          <img src="images/IMG_3046.JPG" alt="Profile Image" />
+        </div>
+
+        <div class="content">
+          <h1>Hey I'm <span>Ifah</span></h1>
+          <div class="typewriter">
+            <span class="typewriter-text">Web Design Student</span>
+          </div>
+          <p class="intro-text">
+            Hi, I'm Syarifah Zahidah, a creative and dedicated individual with a
+            passion for design, innovation, and meaningful digital experiences.
+            I enjoy transforming ideas into visually appealing and functional
+            projects that reflect both creativity and purpose. My goal is to
+            continue learning, exploring new techniques, and creating work that
+            inspires and connects with others.
+          </p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/theifaah.z" target="_blank">
+              <i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <a href="https://www.facebook.com/SyarifahZahidah" target="_blank">
+              <i class="fa-brands fa-facebook"></i
+            ></a>
+
+            <a href="https://www.x.com/ifaahsz" target="_blank">
+              <i class="fa-brands fa-x"></i>
+            </a>
+
+          </div>
+
+          <div class="btn">
+            <button onclick="openWhatsApp()">Contact Me</button>
+          </div>
+
+        <script>
+           function openWhatsApp() {
+           window.open(
+          "https://wa.me/60192052433?text=Hi!%20",
+            "_blank"
+           );
+          }
+        </script>
+
+      <br>
+      <br>
+
+      <div style="text-align: center">
+      <audio controls autoplay>
+        <source
+          src="audio/nadhif-basalamah-kota-ini-tak-sama-tanpamu.m4a"
+          type="audio/ogg"
+        />
+        your browser does not support the audio element.
+      </audio>
+      <figcaption style="font-style: italic">
+        Kota Ini Tak Sama Tanpamu by Nadhif Basalamah
+      </figcaption>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 My Personal Website</p>
+    </footer>
+  </body>
+</html>

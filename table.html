@@ -1,0 +1,115 @@
+<html>
+
+    <head>
+        <title>HTML TABLE</title>
+    </head>
+
+    <style>
+        table, td, th
+        {
+            border:2px solid rgb(184, 25, 141);
+            border-collapse: collapse;
+        }
+
+        td 
+        {
+            text-align:center;
+            background-color: rgb(101, 167, 167);
+        }
+
+        th,td
+        {
+            padding:10px;
+        }
+
+        th
+        {
+            background-color: antiquewhite;
+        }
+
+    </style>
+
+    <body>
+
+        <h1 align="center">Tables of Tables</h1>
+
+        <table style="width: 90%;" align="center">
+
+            <caption>TABLE 1:THIS IS SIMPLE TABLE</caption>
+
+            <tr>
+                <td colspan="3"><img src="images/family_1.jpg" height="400" border="4" alt="Family Photo"></td>
+            </tr>
+
+            <tr>
+                <th>Name</th>
+                <th>Staff ID</th>
+                <th>Group</th>
+            </tr>
+
+            <tr>
+                <td>SYARIFAH ZAHIDAH</td>
+                <td>2023888284</td>
+                <td>CDIM1105E</td>
+            </tr>
+
+            <tr>
+                <td>PAHPOT</td>
+                <td>2023971862</td>
+                <td>CREW</td>
+            </tr>
+
+
+        </table>
+
+        <br>
+        <br>
+
+
+        <table style="width: 100%;" align="center">
+
+            <caption>TABLE 2: TABLE WITH COLSPAN</caption>
+
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Favourite Subject</th>
+            </tr>
+
+            <tr>
+                <td>SYARIFAH ZAHIDAH</td>
+                <td>Records Management</td>
+                <td>Archive Management</td>
+            </tr>
+
+        </table>
+
+
+        <br>
+        <br>
+
+
+        <table style="width: 40%;" align="center" background img src="images/family_1.jpg">
+
+            <caption>TABLE 3: TABLE WITH ROWSPAN</caption>
+
+            <tr>
+                <th>Name</th>
+                <th>SYARIFAH ZAHIDAH</th>
+            </tr>
+
+            <tr>
+                <td rowspan="2">Email</td>
+                <td>syarifah@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td>zahidah@gmail.com</td>
+            </tr>
+
+
+        </table>
+
+
+    </body>
+
+</html>

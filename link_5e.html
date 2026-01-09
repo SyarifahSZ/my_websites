@@ -1,0 +1,267 @@
+<html>
+
+<head>
+    <title>Hyperlink Exercise</title>
+</head>
+
+<style>
+    a:link {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline overline;
+        color: brown
+    }
+</style>
+
+<body link="green" vlink="pink" alink="orange">
+
+    <h1>Different types of hyperlink</h1>
+
+    <!--Relative Link (guna nama file tu sendiri)-->
+
+    click <a href="download1.php/">Go to download Page 1</a>to download
+    <br>
+    click <a href="download2.php/">Go to download Page 1</a>yo download
+
+
+    <!--absolute link (data yg terus kita nak tengok)-->
+    <a href="download1.php/logo_uitm.pdf">View logo UiTM</a>
+    <br>
+    <a href="download2.php/statistic.html">Get Data</a>
+    <br>
+    <a href="https://nsembilan.uitm.edu.my/rembau/images/iklan/kemudahan/k03.jpg"></a>
+
+    <hr size="3" color="black">
+
+
+    <!--Local Link (link to other pages within the current websites)-->
+
+    <a href="welcome_to_my_life.html" target="_blank">Biodata</a>
+    <a href="welcome_to_my_life2.html" target="_blank">Gallery</a>
+    <a href="link_5e.html">Exercise</a>
+
+    <p>
+        <!--creating buttn using button onclick-->
+        <button onclick="document.location='welcome_to_my_life'">Biodata</button>
+    </p>
+
+    <p>
+        <!--Using image as hyperlink, local link: Link to other pages within the current websites-->
+        <a href="welcome_to_my_life.html"><img src="images/bio.png"></a>
+
+        <!--using imagg=es as hyperlink, global link: link to other pages outside the current websites-->
+
+
+        <a href="https://www.instagram.com/theifaah.z"><img src="images/bio.png"></a>
+        <a href.................></a>
+    </p>
+
+
+    <!--image maps (usemap adalah penanda, n perlu ada pairing)-->
+
+    <h1><a name="top"> UiTM Branches in Malaysia</a></h1>
+
+    <img src="images/malaysia-map.jpg" usemap="#malaysia-map">
+    <map name="malaysia-map">
+        <area coords="352,555,462,633" shape="rect" href="https://uitm.edu.my/en/">
+        <area target="_blank" alt="UiTM Shah Alam" title="UiTM Shah Alam" href="https://uitm.edu.my/en/"
+            coords="448,644,333,555" shape="rect">
+        <area target="_blank" alt="UiTM Negeri Sembilan" title="UiTM Negeri Sembilan"
+            href="https://nsembilan.uitm.edu.my/" coords="496,672,42" shape="circle">
+        <area target="_blank" alt="UiTM Sabah" title="UiTM Sabah" href="https://sabah.uitm.edu.my/"
+            coords="1535,133,1404,275,1428,334,1538,337,1621,323,1692,266,1621,166,1476,142,1532,83" shape="poly">
+    </map>
+
+    <p>
+        Universiti Teknologi MARA (Singkatan UiTM) ialah sebuah rangkaian universiti bertaraf universiti awam di
+        Malaysia. Pada mulanya ditubuhkan pada tahun 1956 sebagai Dewan Latehan RIDA yang terletak di Petaling Jaya,
+        Selangor, UiTM membuka pintu kepada lebih kurang 50 pelajar dengan fokus untuk membantu orang Melayu di luar
+        bandar.[4] Sejak itu, UiTM telah berkembang menjadi Institusi Pendidikan Tinggi Awam terbesar di Malaysia dengan
+        infrastruktur fizikal, organisasi kakitangan (akademik dan bukan akademik) serta pelajar.
+
+        Universiti ini terdiri daripada satu kampus utama, 12 kampus negeri berautonomi dan 21 kampus satelit yang
+        menjadikannya 34 kampus keseluruhan di Malaysia. UiTM mempunyai hampir 20,000 staf akademik dan bukan akademik
+        serta menyediakan lebih 500 program dari peringkat Pra-Diploma sehingga Ijazah Sarjana Kedoktoran (PhD).
+        Pengajaran di UiTM dijalankan sepenuhnya dalam Bahasa Inggeris dan juga ada sesetengahnya dalam Bahasa Melayu.
+    </p>
+
+    <h2>Sejarah</h2>
+    <h3>Penubuhan</h3>
+    <p>
+        Universiti Teknologi MARA yang diasaskan sebagai Dewan Latehan RIDA, telah diilhamkan oleh pemimpin orang Melayu
+        ketika itu, Dato’ Onn Jaafar. Idea ini tercetus semasa hasil lawatan belajar ke Ceylon pada 1951 untuk melihat
+        program pembangunan luar bandarnya. Sebuah kertas kerja dihasilkan yang menggariskan penubuhan Lembaga
+        Pembangunan Luar Bandar dan Industri (RIDA) serta objektifnya untuk membina semula masyarakat luar bandar, serta
+        meningkatkan lagi ekonomi orang Melayu di kawasan luar bandar. Kertas Bil. No. 10/1951 telah diluluskan oleh
+        Majlis Perundangan Persekutuan pada tahun yang sama yang membawa kepada penubuhannya. Selain itu, ia juga
+        mendedahkan satu pemerhatian yang menarik mengenai hubungan antara Pusat Latihan RIDA dengan komuniti Melayu.
+        Seksyen 5 kertas kerja ini menggariskan pembenaran dan keperluan untuk mewujudkan Lembaga Pembangunan Luar
+        Bandar dan Industri (RIDA). Perkataan kampong, yang sinonim dengan orang Melayu, juga digunakan dalam Bahagian 8
+        kertas kerja.
+    </p>
+
+    <h3>Pusat Latihan</h3>
+    <p>
+        Pada November 1956, pusat latihan Dewan Latehan RIDA (kini dikenali sebagai kampus satelit Jalan Othman)
+        memulakan operasi di Petaling Jaya, Selangor di bawah kendalian pengarah pertamanya, Tuan Syed Alwi bin Syed
+        Sheikh Alhadi. Ia dibuka secara rasmi pada 14 Oktober 1957 oleh Tun Dr. Ismail bin Abdul Rahman, Menteri
+        Perdagangan dan Industri pada ketika itu. Pusat latihan ini mengadakan kursus prauniversiti, latihan kemahiran
+        perniagaan dan beberapa kursus profesional luaran yang ditawarkan oleh badan-badan antarabangsa yang ditubuhkan,
+        seperti London Chamber of Commerce, Australian Chartered Secretaryship, Australian Society of Accountants dan
+        Institut Pengurusan British.
+
+        Selepas pembentukan Persekutuan Malaysia pada tahun 1963, pusat latihan tersebut mula menerima pelajar
+        bumiputera dari Sabah dan Sarawak serta lebih banyak program akademik yang ditawarkan. Pada tahun 1964, pusat
+        latihan Dewan Latehan RIDA mengadakan konvokesyennya yang pertama dan sebanyak 50 graduan telah dianugerahkan
+        sijil oleh Tun Abdul Razak, Timbalan Perdana Menteri Malaysia.
+
+        Pusat latihan Dewan Latehan RIDA kemudiannya dikenali sebagai Maktab MARA pada tahun 1965. Perubahan nama itu
+        bermakna bahawa kolej itu tidak lagi beroperasi di bawah RIDA dan sebaliknya menjadi unit terpenting di bawah
+        Bahagian Latihan MARA. MARA atau Majlis Amanah Rakyat, di bawah pimpinan Tun (Dr.) Haji Arshad Ayub telah
+        mengambil alih serta memperkuatkuasakan peranan dan tanggungjawab RIDA. Pada tahun 1966, apabila Institut
+        Pengurusan British memansuhkan penawaran peperiksaan jarak jauh, Kolej MARA mula menjalankan Diploma Pengajian
+        Perniagaan yang tersendiri. Pengiktirafan antarabangsa bagi kursus ini adalah dari Ealing Technical College di
+        London, yang juga merupakan pemeriksa luarnya.
+    </p>
+
+    <h3>Pengembangan dan Pertumbuhan</h3>
+    <p>
+        Pada tahun 1967, Maktab MARA dinaik taraf menjadi Institut Teknologi MARA (ITM). Penubuhannya adalah sebagai
+        respons terhadap keperluan profesional yang terlatih, terutama dalam kalangan kaum bumiputera di Malaysia.
+        Kekurangan ini dikenal pasti melalui peninjauan tenaga kerja yang dijalankan oleh kerajaan pada tahun 1965
+        dengan kerjasama Pertubuhan Bangsa-Bangsa Bersatu (PBB).
+
+        ITM memenuhi kursus separuh profesional bagi bidang sains dan teknologi seperti dalam bidang kejuruteraan, sains
+        gunaan serta seni bina, bangunan dan perancangan. Walau bagaimanapun, menyedari tentang kepentingan bidang
+        pembinaan negara pelengkap yang lain, ITM juga telah merangkumi pelbagai bidang yang berasaskan pengurusan dan
+        kemanusiaan yang penting seperti kajian perniagaan, pengurusan hotel dan katering, komunikasi massa, pentadbiran
+        awam, undang-undang, sains kesetiausahaan, serta seni dan reka bentuk.
+
+        Pada 14 Oktober 1967, sebidang tanah seluas 300 ekar di Shah Alam telah diluluskan untuk pembinaan kampus tetap
+        dan upacara perletakan batu asas telah dilaksanakan oleh Timbalan Perdana Menteri ketika itu, YAB Tun Haji Abdul
+        Razak bin Dato' Hussein.[5] Ia melambangkan perletakan ITM di bawah Kementerian Pembangunan Negara dan Luar
+        Bandar.
+
+        Pada akhir tahun 1970, ITM telah diberi autonomi penuh dan ditadbirkan oleh Majlis Pentadbirannya sendiri.[6]
+        Menjelang tahun 1973, kampus cawangan telah ditubuhkan di Perlis, Sabah dan Sarawak.
+    </p>
+
+    <h4>Penaiktarafan Universiti</h4>
+    <p>
+        Pada 22 April 1974, sebuah demonstrasi telah dilakukan oleh ribuan pelajar ITM yang bergerak dari kampus Shah
+        Alam menuju bangunan Parlimen bagi menuntut penaiktarafan ITM. Sekumpulan dari pelajar tersebut telah merampas
+        kereta api dan menuju ke Kuala Lumpur. Demonstrasi ini telah disekat oleh Federal Reserve Unit (FRU) atau Unit
+        Simpanan Persekutuan yang mana sebanyak 1,500 orang pelajar telah ditangkap di bawah Akta Keselamatan dalam
+        Negeri (ISA), 300 pelajar dibawa ke hospital dan hanya 300 orang pelajar yang tiba di Parlimen. Hasilnya, kampus
+        ITM di Shah Alam dan Jalan Othman telah diambil alih oleh pelajar selama hampir dua minggu sehinggalah
+        perundingan berlaku bersama Perdana Menteri Abdul Razak Hussein di pejabat Perdana Menteri.[7] Penaiktarafan ITM
+        tidak berjaya dituntut hasil perundingan tersebut namun ia telah berjaya mendapatkan pengiktirafan beberapa
+        diploma ITM menjadi setaraf dengan ijazah.[8]
+
+        Pada 26 Ogos 1999, Perdana Menteri Mahathir Mohamad telah mengumumkan pertukaran nama ITM kepada Universiti
+        Teknologi MARA (UiTM) semasa Perhimpunan Siswazah UiTM yang telah dipengerusikan oleh Dato’ Dr. Ibrahim bin Ali,
+        Presiden Kesatuan Siswa ITM (KSITM). Pada waktu ini jugalah wujudnya Yayasan Budiman UiTM. Akta ITM (Pindaan
+        2000) (Akta A1073) telah mendapat Persetujuan Diraja dan Yang di-Pertuan Agong telah dilantik sebagai Canselor
+        manakala Rektor digelar Naib Canselor. [9]
+
+        UiTM telah mendapat pengiktirafan ISO 9001:2000 pada 5 Ogos 2004 dan menjadi universiti pertama di dunia yang
+        mendapat pensijilan keseluruhan meliputi pengurusan korporat, perkhidmatan sokongan, pengajaran dan
+        pembelajaran.[10]
+
+    </p>
+
+    <h3>Lagu Universiti</h3>
+    <p>
+        UiTM Di Hatiku
+        Wujudmu di sini di tanah anak merdeka
+
+        Bagai obor ilmu memayungi putera-puteri nya
+
+        Pelopor hidup, budaya bangsa, agama, negara
+
+        Pembentuk akhlak manusia agar jadi sempurna
+
+
+        Ku yang melangkah ke sini ingin mempelajari
+
+        Rahsia di muka bumi dengan cara hakiki
+
+        Tunjukkan aku jalan ilmumu untukku menuju
+
+        Destinasi cita-cita negara dan bangsaku
+
+
+        Majulah bangsa
+
+        Maju negara
+
+        Berkat usaha jaya MARA
+
+        Kami berikrar akan berjasa
+
+        Hingga kita berjaya… demi bangsa
+
+
+        Watikah yang ku miliki kan ku semat dihati
+
+        Janji ku pada pertiwi untuk menabur bakti
+
+        Ku sempurnakan seikhlas hati membela negara
+
+        Doa restu ayah bonda ku untuk mu semua
+
+
+        UiTM... Usaha, Taqwa, Mulia
+
+        Komposer & Penulis Lirik: Othman Mohamed
+
+        Wawasan Setia Warga UiTM
+        Bersatu kita warga UiTM
+
+        Kita bangsa perkasa
+
+        Taat dan setiaku untuk negara
+
+        Penuh semangat waja
+
+
+        Kita… jangan mudah terlupa
+
+        pengorbanan, perjuangan anak bangsa
+
+        Kita… jangan mudah terleka
+
+        kemajuan,keamanan yang ada
+
+        Kita… berterima kasih
+
+        pada pemimpin-pemimpin negara
+
+        Kita… rasa penuh bersyukur
+
+        kerahmatan, kemuliaan darinya
+
+
+        Kamilah pendokong, pewaris bangsa
+
+        Kamilah pendaulat, bangsa Malaysia
+
+        Kamilah warga berwawasan
+
+
+        Untuk Negaraku
+
+        Komposer: Prof. Madya Dr. Sahar Sa’di Hashim
+
+        Penulis Lirik: Prof. Dato’ Dr. Ahmad. Hj. Zainuddin
+    </p>
+
+    <a href="#top">Back to Top</a>
+    <br>
+    <a href="#h2">Back to Sejarah</a>
+
+</body>
+
+</html>

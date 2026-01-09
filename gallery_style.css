@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY (GRADIENT + STAR ANIMATION) ================= */
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  color: #eef1f6;
+  overflow-x: hidden;
+  position: relative;
+  background: radial-gradient(circle at top, #1b2735, #090a0f 70%);
+}
+
+/* ================= STAR BACKGROUND ================= */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-repeat: repeat;
+}
+
+body::before {
+  background-image: radial-gradient(2px 2px at 20% 30%, #ffffffcc, transparent),
+    radial-gradient(2px 2px at 70% 60%, #ffffffaa, transparent),
+    radial-gradient(1.5px 1.5px at 40% 80%, #ffffffbb, transparent),
+    radial-gradient(1.5px 1.5px at 90% 10%, #ffffff99, transparent);
+  animation: starsMove 90s linear infinite, twinkle 6s ease-in-out infinite;
+}
+
+body::after {
+  background-image: radial-gradient(3px 3px at 50% 20%, #ffffff88, transparent),
+    radial-gradient(2px 2px at 10% 90%, #ffffff77, transparent),
+    radial-gradient(2px 2px at 80% 50%, #ffffff66, transparent);
+  animation: starsMoveReverse 160s linear infinite;
+}
+
+@keyframes starsMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2200px);
+  }
+}
+
+@keyframes starsMoveReverse {
+  from {
+    transform: translateY(-2200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ================= NAVBAR (DO NOT TOUCH STRUCTURE) ================= */
+nav {
+  height: 10vh;
+}
+
+.nav-container {
+  height: 100%;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: #b7c3ff;
+}
+
+.links {
+  display: flex;
+  gap: 35px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #f2f4f8;
+  font-weight: 500;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #b7c3ff;
+  transition: 0.3s;
+}
+
+.links a:hover::after,
+.links a.active::after {
+  width: 100%;
+}
+
+/* ================= MAIN (PAGE ENTER ANIMATION) ================= */
+main {
+  padding: 60px 8%;
+  padding-left: 12%;
+  animation: pageEnter 0.9s ease forwards;
+  opacity: 0;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADER ================= */
+.gallery header {
+  max-width: 850px;
+  margin: 0 auto 55px;
+  padding: 26px 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.gallery header h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.gallery header h3 {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+/* ================= GRID ================= */
+.content-multi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 45px;
+}
+
+/* ================= PHOTO CARD ================= */
+figure {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 22px;
+  padding: 14px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+figure:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65);
+}
+
+figure img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 14px;
+  cursor: zoom-in;
+}
+
+figcaption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+/* ================= LIGHTBOX ================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 20px;
+  animation: zoomPop 0.35s ease;
+}
+
+@keyframes zoomPop {
+  from {
+    transform: scale(0.88);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  font-size: 0.9rem;
+  color: #ddd;
+}

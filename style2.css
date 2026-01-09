@@ -1,0 +1,24 @@
+body
+    {
+        background-color:bisque;
+    }
+
+p
+    {
+        color: crimson;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size:14pt;
+        border: 2px solid darkslategray
+        padding: 30px
+    }
+
+h1
+    {
+        color: indigo;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+a: link
+    {
+        color: maroon;
+    }

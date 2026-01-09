@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Work Experience | IFAH</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="workexperience_style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- ===== Additional CSS for Zoom Modal ===== -->
+    <style>
+      /* ZOOM MODAL */
+      #zoomModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        cursor: pointer;
+      }
+
+      #zoomModal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 16px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+        transition: transform 0.3s ease;
+      }
+
+      #zoomModal.show {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><span>IFAH</span></div>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About Me</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="educationhistory.html">Education History</a>
+          <a href="mydream.html">My Dream</a>
+          <a href="workexperience.html" class="active">Work Experience</a>
+          <a href="personalgoals.html">Personal Goals</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+      <h1>Work Experience</h1>
+      <p>A summary of my teaching and internship experiences</p>
+    </header>
+
+    <div style="text-align: center">
+      <audio controls autoplay>
+        <source src="audio/nidjilaskarpelangi.mp3" type="audio/ogg" />
+        your browser does not support the audio element.
+      </audio>
+      <figcaption style="font-style: italic">
+        Laskar Pelangi by Nidji
+      </figcaption>
+    </div>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main>
+      <!-- ===== TEACHING EXPERIENCE ===== -->
+      <section class="experience-section">
+        <h2>Teaching Experience</h2>
+
+        <section class="content-multi">
+          <figure>
+            <img
+              src="images/kindergarten.jpg"
+              alt="Teaching in Kindergarten"
+              class="zoomable"
+            />
+            <figcaption style="font-style: italic">Kindergarten</figcaption>
+          </figure>
+
+          <figure>
+            <img src="images/kafa.jpg" alt="Teaching KAFA" class="zoomable" />
+            <figcaption style="font-style: italic">
+              Kelas Agama Fardhu Ain (KAFA)
+            </figcaption>
+          </figure>
+        </section>
+
+        <article>
+          <p>
+            My work experience as a teacher in a kindergarten and as a KAFA
+            teacher has been one of the most meaningful experiences in my life.
+            Teaching young children requires patience, creativity, and
+            dedication, and I am grateful for the opportunity to guide and
+            educate them during their early learning years.
+          </p>
+
+          <p>
+            At the kindergarten, I was responsible for teaching basic subjects
+            such as reading, writing, counting, and moral values. I also planned
+            fun learning activities to make lessons more interesting and
+            enjoyable for the children. Through this experience, I learned how
+            to communicate effectively with young learners and create a positive
+            learning environment.
+          </p>
+
+          <p>
+            Besides teaching in kindergarten, I also taught KAFA (Kelas Agama
+            Fardhu Ain) classes. In these classes, I focused on teaching Islamic
+            knowledge, prayers, and good manners. This experience strengthened
+            my understanding of Islamic education and improved my ability to
+            teach religious values with kindness and patience.
+          </p>
+        </article>
+      </section>
+
+      <!-- ===== INTERNSHIP EXPERIENCE (TEXT LEFT, IMAGE RIGHT) ===== -->
+      <section class="experience-section">
+        <h2>Internship Experience</h2>
+
+        <section class="content-multi reverse">
+          <!-- TEXT LEFT -->
+          <article>
+            <p>
+              My internship experience was one of the most valuable parts of my
+              educational journey. It gave me the opportunity to apply what I
+              had learned in class to a real working environment and helped me
+              gain a better understanding of my future career.
+            </p>
+            <p>
+              I completed my internship at Pejabat Pendidikan Daerah Rembau,
+              where I worked for two months as an intern in the Sektor
+              Perancangan. The internship taught me the importance of
+              discipline, responsibility, and maintaining a positive attitude at
+              work.
+            </p>
+            <p>
+              I had the chance to observe how an organization operates and how
+              teamwork contributes to achieving goals. My supervisors and
+              colleagues were very supportive and guided me whenever I faced
+              challenges.
+            </p>
+            <p>
+              Through this experience, I gained more confidence and a clearer
+              vision of my career path. It made me realize that every task, no
+              matter how small, plays a role in the success of an organization.
+              I also learned to appreciate the value of continuous learning and
+              self-improvement.
+            </p>
+          </article>
+
+          <!-- IMAGE RIGHT -->
+          <figure>
+            <img src="images/intern1.jpg" alt="Internship 1" class="zoomable" />
+            <img src="images/intern2.jpg" alt="Internship 2" class="zoomable" />
+            <img src="images/intern3.jpg" alt="Internship 3" class="zoomable" />
+            <img src="images/intern4.jpg" alt="Internship 4" class="zoomable" />
+            <figcaption style="font-style: italic">
+              Internship at Pejabat Pendidikan Daerah Rembau
+            </figcaption>
+          </figure>
+        </section>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 My Personal Website</p>
+    </footer>
+
+    <!-- ================= ZOOM MODAL ================= -->
+    <div id="zoomModal">
+      <img src="" alt="Zoomed Image" />
+    </div>
+
+    <!-- ================= JS for Zoom ================= -->
+    <script>
+      const zoomableImages = document.querySelectorAll(".zoomable");
+      const zoomModal = document.getElementById("zoomModal");
+      const zoomModalImg = zoomModal.querySelector("img");
+
+      zoomableImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          zoomModalImg.src = img.src;
+          zoomModal.classList.add("show");
+        });
+      });
+
+      zoomModal.addEventListener("click", () => {
+        zoomModal.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>

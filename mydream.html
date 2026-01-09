@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Me | IFAH</title>
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="mydream_style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <span class="glow-bg"></span>
+    <span class="glow-bg second"></span>
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><span>IFAH</span></div>
+
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="aboutme.html">About Me</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="educationhistory.html">Education History</a>
+          <a href="mydream.html" class="active">My Dream</a>
+          <a href="workexperience.html">Work Experience</a>
+          <a href="personalgoals.html">Personal Goals</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+      <h1>My Dreams & Aspirations</h1>
+      <p>
+        This page shares my dreams about travelling, vehicles, and university
+        life.
+      </p>
+    </header>
+
+    <div style="text-align: center">
+      <audio controls autoplay>
+        <source
+          src="audio//lirik-asyik-batas-senja-kita-usahakan-lagi-lirik-asyik.m4a"
+          type="audio/ogg"
+        />
+        your browser does not support the audio element.
+      </audio>
+      <figcaption style="font-style: italic">
+        Kita Usahakan Lagi by Batas Senja
+      </figcaption>
+    </div>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+      <!-- ===== TRAVELLING ===== -->
+      <section>
+        <h2>Travelling</h2>
+
+        <div class="content-multi">
+          <img src="images/makkah.jpg" alt="Makkah" class="zoomable" />
+          <img
+            src="images/switzerland1.jpg"
+            alt="Switzerland"
+            class="zoomable"
+          />
+          <img src="images/ireland.jpg" alt="Ireland" class="zoomable" />
+          <img src="images/london.jpg" alt="London" class="zoomable" />
+          <img src="images/japan.jpg" alt="Japan" class="zoomable" />
+        </div>
+
+        <p>
+          Everyone has a dream, and my dream is to travel around the world. I
+          love learning about new places, cultures, and beautiful scenery. I
+          dream of visiting Mecca and Medina, Switzerland, Ireland, London, and
+          Japan to experience famous landmarks, local food, and traditions. This
+          places, I also want to bring my parents to travel around the world,
+          especially Mecca and Medina, I pray that they lives with healthy and
+          live long.
+        </p>
+      </section>
+
+      <!-- ===== DREAM VEHICLES ===== -->
+      <section>
+        <h2>Dream Vehicles</h2>
+
+        <div class="content-multi">
+          <img
+            src="images/myviadvance.JPG"
+            alt="Myvi Advance"
+            class="zoomable"
+          />
+          <img src="images/mercedes.jpg" alt="Mercedes" class="zoomable" />
+          <img src="images/audi.jpg" alt="Audi R7" class="zoomable" />
+          <img
+            src="images/zx25r.jpg"
+            alt="Kawasaki Ninja ZX-25R"
+            class="zoomable"
+          />
+        </div>
+
+        <p>
+          I admire cars and bikes like Myvi Advance, Mercedes, Audi, and
+          Kawasaki Ninja ZX-25R for their design, performance, and technology. I
+          wish that one day I can achieves all of this for myself what I have
+          been through and also for my family.
+        </p>
+      </section>
+
+      <!-- ===== DREAM UNIVERSITY ===== -->
+      <section>
+        <h2>Dream University</h2>
+
+        <div class="content-multi">
+          <h3>University of Edinburgh</h3>
+
+          <img
+            src="images/edinburgh_futures_institute.jpg"
+            alt="University of
+          Edinburgh"
+            class="zoomable"
+          />
+
+          <h3>University of Warwick</h3>
+          <img
+            src="images/University-of-Warwick.webp"
+            alt="University of Warwick"
+            class="zoomable"
+          />
+        </div>
+
+        <p>
+          Education is important to me. I want to study abroad to improve my
+          knowledge and future career. I dream of studying at the University of
+          Edinburgh for pursuing a Bachelor’s in Information Systems and
+          University of Warwick for pursuing Masters a Management of Information
+          Systems and Digital Innovation MSc.
+        </p>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 My Personal Website</p>
+    </footer>
+
+    <!-- ================= LIGHTBOX SCRIPT ================= -->
+    <div class="lightbox-overlay"></div>
+    <script>
+      const lightbox = document.querySelector(".lightbox-overlay");
+
+      document.querySelectorAll(".zoomable").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}" />`;
+          lightbox.classList.add("active");
+        });
+      });
+
+      lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightbox.querySelector("img")) {
+          lightbox.classList.remove("active");
+        }
+      });
+    </script>
+
+    <span class="background-glow"></span>
+  </body>
+</html>
