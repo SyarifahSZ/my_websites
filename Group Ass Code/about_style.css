@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #1f1f1f;
+}
+
+.logo {
+  color: #f5c6d6;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+  color: #f5c6d6;
+}
+
+/* HERO */
+.hero {
+  height: 75vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("images/velorareal.jpg.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* HERO TEXT */
+.hero-content {
+  padding-left: 80px;
+  max-width: 500px;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 30px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  margin-top: 5px;
+  font-size: 19px;
+  opacity: 0.9;
+  color: #e5e5e5;
+}
+
+/* CONTENT SECTION */
+.content {
+  background-color: #f5ecdf;
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #5a3e2b;
+  margin-bottom: 20px;
+
+  animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+.content p {
+  max-width: 900px;
+  line-height: 1.8;
+  color: #4a3324;
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+
+/* VISION & MISSION */
+.vm {
+  display: flex;
+  gap: 40px;
+}
+
+.box {
+  background-color: #fff8ee;
+  padding: 10px 20px;
+  border-radius: 16px;
+  flex: 1;
+
+  border: 2px solid rgba(207, 163, 106, 0.8);
+
+  box-shadow: 0 0 20px rgba(207, 163, 106, 0.25),
+    inset 0 0 10px rgba(207, 163, 106, 0.2);
+
+  transition: all 0.4s ease;
+}
+
+.box h3 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #5a3e2b;
+  margin-bottom: 14px;
+
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+.box p {
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px #cfa36a;
+  }
+  50% {
+    text-shadow: 0 0 15px #e7b889, 0 0 30px #e7b889, 0 0 45px #e7b889;
+  }
+  100% {
+    text-shadow: 0 0 5px #cfa36a;
+  }
+}
+
+/* OPERATING HOURS */
+
+.operation-box {
+  margin-top: 60px;
+
+  background-color: #fff8ee;
+  padding: 45px;
+  border-radius: 18px;
+
+  max-width: 750px;
+  width: 100%;
+
+  border: 2px solid rgba(207, 163, 106, 0.8);
+
+  box-shadow: 0 0 22px rgba(207, 163, 106, 0.25),
+    inset 0 0 12px rgba(207, 163, 106, 0.18);
+
+  transition: 0.4s ease;
+}
+
+.operation-box h3 {
+  text-align: center;
+
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  color: #5a3e2b;
+
+  margin-bottom: 25px;
+
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+/* HOURS LIST */
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hours div {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  background: rgba(207, 163, 106, 0.08);
+}
+
+.hours span {
+  font-size: 16px;
+  color: #4a3324;
+  font-weight: 600;
+}
+
+/* hover glow */
+
+.operation-box:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 0 35px rgba(207, 163, 106, 0.6),
+    inset 0 0 18px rgba(207, 163, 106, 0.3);
+}
+
+.box:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 0 35px rgba(207, 163, 106, 0.6),
+    inset 0 0 18px rgba(207, 163, 106, 0.3);
+}

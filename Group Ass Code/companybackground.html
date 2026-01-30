@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velora Oraganization staff</title>
+    <link rel="stylesheet" href="companybackground_style.css">
+</head>
+    
+<!-- NAVIGATION -->
+<header>
+      <div class="logo">Velora Perfume</div>
+      <nav>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="companybackground.html">Company Background</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <h1>Velora Creative Team</h1>
+
+    <div class="tree">
+        <ul>
+            <li>
+                <div class="node boss" onclick="info('Creative Director')">
+                    <img src="images/syarifah.jpg.jpeg" alt="Profile">
+<span class="name">Ms. Syarifah Zahidah</span>
+                    <span class="role">Creative Director</span>
+                </div>
+                
+                <ul>
+                    <li>
+                        <div class="node mkt" onclick="info('Marketing Manager')">
+                            <img src="images/zafirah.jpg.jpeg" alt="Profile">
+                            <span class="name">Ms. Nur Zafirah</span>
+                            <span class="role">Marketing Manager</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="node sales" onclick="info('Sales Associate')">
+                                    <img src="images/nurin.jpg.jpeg" alt="Profile">
+                                    <span class="name">Ms. Nurin Khadijah</span>
+                                    <span class="role">Sales Associate</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <div class="node ops" onclick="info('Operation Manager')">
+                            <img src="images/hafizi.jpg.jpeg" alt="Profile">
+                            <span class="name">Mr. Muhammad Hafizi</span>
+                            <span class="role">Operation Manager</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="node rnd" onclick="info('R&D Manager')">
+                            <img src="images/lisa.jpg.jpeg" alt="Profile">
+                            <span class="name">Ms. Nur Khalisah</span>
+                            <span class="role">R&D Manager / Formulator</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        /* --- JAVASCRIPT --- */
+        function info(jawatan) {
+            console.log("Maklumat jawatan: " + jawatan);
+            alert("Profil Jawatan: " + jawatan + "\nStatus: Aktif");
+        }
+    </script>
+    <br clear="all">
+
+<div class="card">
+    <h1>Team Directory</h1>
+
+ <button class="accordion"><b>Creative Director</b>Ms. Syarifah Zahidah</button>
+    <div class="panel">
+        <div class="staff-content">
+            <img src="https://ui-avatars.com/api/?name=Syarifah+Zahidah&background=random" alt="Profile">
+            <div class="staff-info">
+                <p><strong>Emel:</strong> director@veloraperfume.com</p>
+                <p><strong>Phone Numbers:</strong>+6012-345 6789</p>
+                <p><strong>Location:</strong>Studio Kreatif, KL</p>
+            </div>
+        </div>
+    </div>
+
+ <button class="accordion"><b>Marketing Manager</b>Ms. Nur Zafirah</button>
+    <div class="panel">
+        <div class="staff-content">
+            <img src="https://ui-avatars.com/api/?name=Nur+Zafirah&background=random" alt="Profile">
+            <div class="staff-info">
+                 <p><strong>Emel:</strong>marketing@veloraperfume.com </p>
+                <p><strong>Phone Numbers:</strong>+6013-6087 2222</p>
+                <p><strong>Location:</strong>Studio Kreatif, KL</p>
+            </div>
+        </div>
+    </div>
+
+ <button class="accordion"><b>Sales Associate</b>Ms. Nurin Khadijah</button>
+    <div class="panel">
+        <div class="staff-content">
+            <img src="https://ui-avatars.com/api/?name=Nurin+Khadijah&background=random" alt="Profile">
+            <div class="staff-info">
+                 <p><strong>Emel:</strong>sales@veloraperfume.com</p>
+                <p><strong>Phone Numbers:</strong>+6012-926 6378</p>
+                <p><strong>Location:</strong>Studio Kreatif, KL</p>
+            </div>
+        </div>
+    </div>
+<button class="accordion"><b>Operation Manager</b> Mr. Muhammad Hafizi</button>
+    <div class="panel">
+        <div class="staff-content">
+            <img src="https://ui-avatars.com/api/?name=Muhammad+Hafizi&background=random" alt="Profile">
+            <div class="staff-info">
+                <p><strong>Emel:</strong>operation@veloraperfume.com </p>
+                <p><strong>Phone Numbers:</strong>+6012-987 6543</p>
+                <p><strong>Location:</strong>Studio Kreatif, KL</p>
+            </div>
+        </div>
+    </div>
+
+ <button class="accordion"><b>R&D Manager / Formulator</b>Ms. Nur Khalisah</button>
+    <div class="panel">
+        <div class="staff-content">
+           <img src="https://ui-avatars.com/api/?name=Nur+Khalisah&background=random" alt="Profile">
+            <div class="staff-info">
+                 <p><strong>Emel:</strong>rndlab@veloraperfume.com </p>
+                <p><strong>Phone Numbers:</strong>6017-333 4455</p>
+                <p><strong>Location:</strong>Studio Kreatif, KL</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Script untuk fungsi buka/tutup accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                panel.style.border = "0px solid #bbb";
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.border = "1px solid #bbb";
+                panel.style.borderTop = "none";
+            } 
+        });
+    }
+</script>
+<br clear="all">
+
+<h2>
+    The Story of Velora Perfume
+    <br>
+The journey of Velora Perfume began with our founder, Puan Natasha, and her deep passion for the fresh, enchanting scents of local flora.Inspired by traditional blooms such as Kenanga(Cananga odorata), Kesidang (Vallaris glabra), Bunga Cina (Gardenia jasminoides) and Sundal Malam (Polianthes tuberosa).
+<br>
+She noticed a gap in the market: these beautiful scents were rarely captured in perfumes because their natural fragrance is notoriously delicate and fleeting.Driven by a desire to preserve these scents, Velora utilizes cutting-edge technology and "floral dissection"to study the molecular origin of each aroma.
+<br>
+This scientific approach allows us to extract the purest essence of the flowers, resulting in high-qualitylong-lasting fragrances. Our mission is to provide premium local scents that are accessible and affordable for everyone, regardless of age or gender.
+</h2>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Velora Perfume | Group Assignment</p>
+</footer>
+</body>
+</html>

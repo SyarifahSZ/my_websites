@@ -1,0 +1,86 @@
+<!-- ================= HTML FILE (index.html) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="contact_style.css" />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="logo">Velora Perfume</div>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="companybackground.html">Company Background</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <body>
+    <!-- Background Section -->
+    <div class="background-overlay"></div>
+
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+
+      <div class="social-links">
+        <a
+          href="https://www.instagram.com/veloraaa_scent?igsh=MXE5YmRxc3JiYWJiZQ%3D%3D"
+          target="_blank"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/SyarifahZahidah" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://www.x.com/ifaahsz" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+
+      <div class="btn">
+        <button onclick="openWhatsApp()">Contact Me on WhatsApp</button>
+      </div>
+
+      <div class="phone">📞 +60 19-205 2433</div>
+
+      <div class="address">
+        📍 Alamat: Studio Kreatif KL<br />
+        Level 3, No. 18, Jalan Bangsar Utama 1<br />
+        59000 Kuala Lumpur<br />
+        Wilayah Persekutuan Kuala Lumpur<br /><br />
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Level+3+No+18+Jalan+Bangsar+Utama+1+59000+Kuala+Lumpur"
+          target="_blank"
+        >
+          View on Google Maps
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function openWhatsApp() {
+        window.open(
+          "https://wa.me/60192052433?text=Hi! Im interested for purchasing your scent%20",
+          "_blank"
+        );
+      }
+    </script>
+
+    
+  </body>
+</html>

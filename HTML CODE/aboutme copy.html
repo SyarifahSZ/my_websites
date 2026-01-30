@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Me | IFAH</title>
+    <link rel="stylesheet" href="aboutme_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- Floating glow -->
+    <span class="background-glow"></span>
+    <span class="background-glow second"></span>
+
+    <!-- Navigation -->
+    <nav>
+      <header class="nav-container">
+        <h1 class="logo">IFAH</h1>
+        <menu class="links">
+          <a href="index.html">Home</a>
+          <a href="aboutme.html" class="active">About Me</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="educationhistory.html">Education History</a>
+          <a href="mydream.html">My Dream</a>
+          <a href="workexperience.html">Work Experience</a>
+          <a href="personalgoals.html">Personal Goals</a>
+        </menu>
+      </header>
+    </nav>
+
+    <!-- Music -->
+    <div class="audio-wrapper">
+      <audio controls autoplay>
+        <source
+          src="audio/idgitaf-idgitaf-sedia-aku-sebelum-hujan-official-lyric-video.m4a"
+          type="audio/ogg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+      <figcaption>Sedia Aku Sebelum Hujan by Idtigaf</figcaption>
+    </div>
+
+    <main>
+      <!-- ================= ABOUT ME ================= -->
+      <section class="about">
+        <article class="about-details">
+          <figure class="profile-image">
+            <img
+              src="images/dearself.jpg"
+              alt="Portrait of Syarifah"
+              class="zoomable"
+            />
+          </figure>
+
+          <section class="about-text">
+            <h3 class="topic">Biodata</h3>
+            <section class="card-group">
+              <article class="card">
+                <h4>Full Name</h4>
+                <p>Syarifah Zahidah binti Suarel</p>
+              </article>
+              <article class="card">
+                <h4>Birth</h4>
+                <p>29th March 2005, Hospital Seremban</p>
+              </article>
+              <article class="card">
+                <h4>Education</h4>
+                <p>Diploma in Information Management, UiTM Rembau</p>
+              </article>
+              <article class="card">
+                <h4>Personality</h4>
+                <p>Ambivert, loves learning</p>
+              </article>
+              <article class="card">
+                <h4>Hobbies</h4>
+                <p>Badminton, Movies, YouTube</p>
+              </article>
+            </section>
+
+            <h3 class="topic">Fun Facts</h3>
+            <section class="card-group">
+              <article class="card">
+                <h4>Positive Energy</h4>
+                <p>Loves to laugh and make others smile</p>
+              </article>
+              <article class="card">
+                <h4>Passion</h4>
+                <p>Playing badminton & photography</p>
+              </article>
+              <article class="card">
+                <h4>Quirky Side</h4>
+                <p>
+                  Shy at first, talkative when comfortable, scared of cats but
+                  loves cat videos
+                </p>
+              </article>
+            </section>
+          </section>
+        </article>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ================= FAMILY ================= -->
+      <section class="family">
+        <h3 class="topic center">My Family</h3>
+        <article class="family-content">
+          <figure class="family-image">
+            <img
+              src="images/family_1.jpg"
+              alt="My Family 💕"
+              class="zoomable"
+            />
+            <figcaption>My beloved family 💕</figcaption>
+          </figure>
+
+          <section class="family-description">
+            <p>
+              I come from a small and loving family who has always been my
+              greatest source of strength and motivation. Their guidance and
+              support have shaped my character and values since young. I am the
+              youngest one from three siblings, and I'm the most introvert in
+              the family.
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- ================= COUSINS ================= -->
+      <section class="cousins">
+        <h3 class="topic center">My Cousins</h3>
+        <article class="family-content">
+          <figure class="family-image">
+            <img src="images/withcousie1.jpg" alt="Cousin 1" class="zoomable" />
+          </figure>
+
+          <figure class="family-image">
+            <img src="images/withcousie2.jpg" alt="Cousin 2" class="zoomable" />
+          </figure>
+
+          <section class="family-description">
+            <p>
+              I have wonderful cousins who I love spending time with. We enjoy
+              sharing stories, playing games, and creating unforgettable
+              memories together. They bring joy and laughter to every family
+              gathering.
+            </p>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <img src="" alt="" />
+    </div>
+
+    <!-- ================= JS ================= -->
+    <script>
+      const lightbox = document.getElementById("lightboxOverlay");
+      const lightboxImg = lightbox.querySelector("img");
+      const zoomableImages = document.querySelectorAll(".zoomable");
+
+      zoomableImages.forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add("active");
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+    </script>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <p>&copy; 2025 My Personal Website</p>
+    </footer>
+  </body>
+</html>
